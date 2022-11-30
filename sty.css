@@ -1,0 +1,10 @@
+body
+{
+    overflow: hidden;
+}
+#catalog
+{
+    width: 600px;
+    height: 500px;
+    margin: 5% auto;
+}

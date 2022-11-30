@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap,js/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="bootstrap,js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    footer{
+width: 100%;
+position: relative;
+bottom: 0;
+background: linear-gradient(to right, #d90429, #020102);
+color: #fff;
+padding: 0px 0 20px;
+border-top-left-radius: 110px;
+font-size: 20px;
+line-height: 20px;
+
+}
+.row1{
+width: 75%;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content:space-between;
+}
+.col1{
+flex-basis: 15%;
+padding: 3px;
+}
+.logo{
+width: 100px;
+margin-bottom: 2px;
+}
+.col h3{
+width: fit-content;
+margin-bottom: 30px;
+position: relative;
+}
+.email-id{
+width: fit-content;
+border-bottom: 1px solid #ccc;
+margin: 30px 0;
+}
+ul li{
+list-style: none;
+/* margin-bottom: 15px; */
+}
+ul li a{
+text-decoration: none;
+color: #fff;
+}
+</style>
+<body>
+    <header>
+
+        <div class="nav container">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <a href="#" class="logo">AUTO<span>WORLD</span></a>
+            <ul class="navbar">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="catalog.html">catalogue</a></li>
+                <li><a href="product us.html">Our Car</a></li>
+                <li><a href="bank.html">Bank Scheme</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">contact us</a></li>
+                
+            </ul>
+            <i class='bx bx-search' id="search-icon" ></i>
+            <div class="search-box container">
+                <input type="search" name="" id="" placeholder="search here...">
+            </div>
+    </div>
+    </header><br><br><br><br>
+    <script src="main.js"></script>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center my-2" style="color: red;" > Contact Us</h1>
+            <h2 class="text-center my-3" style="color: black;">Contact with Our Help Team</h2>
+            <hr>
+            <div class="col-md-6">
+                <form action="contactus.html" onsubmit="return validate()">
+                    <label class="form-label">User Name: <span class="text-danger">*</span></label>
+                    <input type="text"  id="user" placeholder="enter your name" class="form-control"> 
+                    <small><span id="usererror" class="text-danger"></span><br></small> <br>
+                    <label class="form-label mt-3">Email: <span class="text-danger">*</span></label>
+                    <input type="email"  id="email" placeholder="enter your email" class="form-control"> <br>
+                    <small><span id="emailerror" class="text-danger"></span><br></small>
+                    <label class="form-label mt-3">Your Message Here: <span class="text-danger">*</span></label>
+                   <textarea id="msg" cols="30" rows="10" class="form-control"></textarea>
+                    <small><span id="msgerror"  class="text-danger"></span> <br> </small>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button><br><br>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1bpI8BK6aAXSGL7gZdjDHafpsu5B_WJQ&ehbc=2E312F" width="500" height="480"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            
+            <h4 class="h4"> <i class="fa-solid fa-location-dot mt-5"></i>&nbsp;Aptech Metro Star Gate</h3>
+            <h4 class="h4">&nbsp;&nbsp;&nbsp; DHA Phase 8</h4>
+            
+        </div>
+    </div>
+    <script>
+        function validate()
+        {
+            var u = document.getElementById("user").value;
+            var e = document.getElementById("email").value;
+            var m = document.getElementById("msg").value;
+
+            //regular expressions
+            var usercheck = /^[A-Za-z. ]{3,20}$/ ; 
+            var emailcheck = /^[a-zA-Z_]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z.]{2,6}$/ ;
+            var msgcheck =  /^[A-Za-z. ]{10,500}$/;
+            //conditons
+            if(usercheck.test(u))
+            {
+                document.getElementById("usererror").innerHTML="" ;
+            }
+            else
+            {
+                document.getElementById("usererror").innerHTML="Invalid User name" ;
+                return false;
+            }
+            if(emailcheck.test(e))
+            {
+                document.getElementById("emailerror").innerHTML="" ;
+            }
+            else
+            {
+                document.getElementById("emailerror").innerHTML="Invalid Email" ;
+                return false;
+            }
+            if(msgcheck.test(m))
+            {
+                document.getElementById("msgerror").innerHTML="" ;
+            }
+            else
+            {
+                document.getElementById("msgerror").innerHTML="Your message should containe 10 to 500 words" ;
+                return false;
+            }
+           alert("Your Message has been submitted. We wil get back to you with 4 to 5 working days");
+        }
+    </script>
+    <footer>
+        <div class="row1">
+            <div class="col1">
+                <img src="https://carfixo.in/wp-content/uploads/2022/01/Engine-Oil-PNG-Image.png" class="logo">
+                <p>  BIG DREAMS HAVE SMALL BEGINNINGS.</p>
+                </div>
+                    <div class="col1">
+                        <h3>office</h3>
+                        <p> aptech metro star gate center</p>
+                        <p class="email-id">abubakerapptech@gmail.com</p>
+                        <h4>+92-3003578634</h4>
+                    </div>
+            <div class="col1">
+                     <h3>links</h3>
+                     <ul>
+                        <li><a href="index.html">Home</a></li><br>
+                        <li><a href="catalog.html">catalogue</a></li><br>
+                        <li><a href="product us.html">our car</a></li><br>
+                        <li><a href="about.html">about us</a></li><br>
+                        <li><a href="bank.html">bank Scheme</a></li><br>
+                        <li><a href="contact.html">contact us</a></li><br>
+                    </ul>
+            </div>
+            <div class="col1">
+                <h3>newsletter</h3>
+                <from>
+                    <input type="email" placeholder="enter your email id" required>
+                </from>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+contactus.html
+Displaying contactus.html.
+Contact us with complete validation
+Sahia Jamal
+•
+28 Oct
+
+contactus.html
+HTML
+Class comments
